@@ -1,0 +1,29 @@
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+
+  background: url(./assets/bg-main-mobile.png) top -104px left no-repeat;
+
+  @include breakpoint(tablet) {
+    background: url(./assets/bg-main-tablet.png) no-repeat top -112px left -254px,
+      url(./assets/bg-pattern-1.svg) no-repeat top -37px right -38px / 35%;
+  }
+
+  @include breakpoint(desktop) {
+    background: url(./assets/bg-main-desktop.png) no-repeat top -112px left -254px,
+      url(./assets/bg-pattern-1.svg) no-repeat top -45px right -2px/22%;
+  }
+}
+
+.layout {
+  padding: 0 24px;
+
+  @include breakpoint(tablet) {
+    padding: 0 39px;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 1110px;
+    margin: auto;
+    padding: 0;
+  }
+}

@@ -1,0 +1,113 @@
+:root {
+  --facebook-color: blue;
+}
+
+.footer {
+  padding-right: 30px;
+
+  @include breakpoint(desktop) {
+    padding: 20px 0 0 0;
+  }
+
+  .logo__wrap {
+    margin-bottom: 31px;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+
+    @include breakpoint(desktop) {
+      flex: 0.7;
+    }
+  }
+
+  .layout {
+    @include breakpoint(tablet) {
+      padding: 0 9px 10px 33px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include breakpoint(desktop) {
+      padding: 0;
+    }
+  }
+}
+
+.footer__content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #191826;
+  margin-bottom: 64px;
+
+  @include breakpoint(tablet) {
+    flex: 1;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #191826;
+  }
+}
+
+.social-media__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include breakpoint(tablet) {
+    flex: 1;
+    justify-content: flex-end;
+    align-self: flex-start;
+    padding-top: 31px;
+  }
+}
+
+.social-media__item {
+  display: inline-block;
+
+  a {
+    &:before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: black;
+    }
+
+    &:hover {
+      &:before {
+        background: #fa7453;
+      }
+    }
+  }
+
+  &.social-media__item-facebook {
+    a {
+      &:before {
+        mask: url(./assets/icon-facebook.svg) no-repeat;
+      }
+    }
+  }
+
+  &.social-media__item-insta {
+    a {
+      &:before {
+        mask: url(./assets/icon-instagram.svg) no-repeat;
+      }
+    }
+  }
+
+  &.social-media__item-twitter {
+    a {
+      &:before {
+        mask: url(./assets/icon-twitter.svg) no-repeat;
+      }
+    }
+  }
+}
